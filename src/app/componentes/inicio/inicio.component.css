@@ -1,0 +1,115 @@
+.row {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+#logoap {
+    width: 150px;
+    height: 64px;
+    
+}
+
+.logored {
+    float: right;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#imgperfil {
+    height: 200px;
+    width: 200px;
+    border-radius: 75%;
+    top: auto;
+    margin-top: -150px;
+}
+
+.conteinerAcerca {
+    width: 100%;
+    position: relative;
+    bottom: 150px;
+    
+}
+
+.left {
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    width: 45%;
+    height: auto;
+}
+
+.right {
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    position: relative;
+    float: right;
+    width: 45%;
+    height: auto;
+}
+
+.imgfondo {
+    width: 100%;
+    margin-top: -10px;
+    
+
+}
+
+footer {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#imgProyecto{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#imgEducacion{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+}
+
+#imgExperiencia{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+}
+
+#imgAcer{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    border: 1px solid black;
+    
+}
+
+#icuad{
+    top: auto;
+    margin-top: -25px;
+    
+}
+
+#centro{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#acer{
+    word-wrap: break-word;
+}

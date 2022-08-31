@@ -1,0 +1,20 @@
+.row{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+textarea.form-control {
+    min-height: calc(1.5em + 0.75rem + 2px);
+}
+
+#imgExperiencia{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: space-between;
+    
+}

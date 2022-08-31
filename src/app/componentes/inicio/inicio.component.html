@@ -1,0 +1,193 @@
+<div class="row">
+    <div class="conteiner">
+        <div>
+            <img src="../../../assets/arg-programa.png" alt="" id="logoap">
+        </div>
+
+        <div class="logored">
+            <a (click)="goToLink('https://www.facebook.com/enzoac.dc')" class="pointer"><img
+                    src="../../../assets/facebook_icon-icons.com_53612.png"></a>
+            <a (click)="goToLink('https://github.com/Enz-22')" class="pointer"><img
+                    src="../../../assets/GitHub-Mark-64px.png"></a>
+            <a href='https://appieac.web.app/iniciar-sesion' title="Iniciar Sesion"><img
+                    src="../../../assets/login_circle_icon_206018.png"></a>
+        </div>
+    </div>
+</div>
+<!-- ACERCA -->
+<div class="row main-container">
+    <div>
+        <img src="../../../assets/imgfondo.png" alt="" class="imgfondo">
+    </div>
+    <div id="main-container">
+        <div class="row aling-items" *ngFor="let acer of acerca">
+            <div class="containerAcerca">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4">
+                        <div class="text-center">
+                            <img src="{{acer.fotoacerca}}" alt="" id="imgperfil">
+                        </div>
+                        <div>
+                            <h1>{{acer.nombreacerca}}</h1>
+                            <h2>Full Stack Developer Jr</h2>
+                            <span>Buenos Aires (Argentina)</span>
+                            <br>
+                            <span>Informacion de contacto:
+                                <br>
+                                {{acer.contactoacerca}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 container text-center">
+                        <div class="row justify-content-start">
+                            <div class="col-md-3">
+                                <img src="https://wsii.diread.uns.edu.ar/img/logo-uns.jpeg" alt="" id="imgAcer">
+                            </div>
+                            <div class="col-md-6 text-center" id="centro">
+                                <h2>Universidad Nacional del Sur</h2>
+                            </div>
+                        </div>
+                        <div class="row justify-content-start">
+                            <div class="col-md-3">
+                                <img src="https://img.freepik.com/vector-premium/logotipo-radio_9850-254.jpg?w=2000"
+                                    alt="" id="imgAcer">
+                            </div>
+                            <div class="col-md-6 text-center" id="centro">
+                                <h2>Del Sur 103.7</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Acerca de</h2>
+                        </div>
+                        <div id="acer">
+                            <p>{{acer.detalleacerca}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- EXPERIENCIA -->
+<div class="row main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <h2>Experiencia</h2>
+            </div>
+        </div>
+    </div>
+    <div id="main-container">
+        <div class="row align-items" *ngFor="let exper of experiencia">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-sm-6 col-md-3 text-center">
+                        <img src="{{exper.contactoExp}}" alt="" id="imgExperiencia">
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <h3>{{exper.empresaExp}}</h3>
+
+                        <h4>{{exper.dateExp}}</h4>
+
+                        <h5>{{exper.cargoExp}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- EDUCACION -->
+<div class="row main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <h2>Educación</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div class="row align-items" *ngFor="let educa of educacion">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-sm-6 col-md-3 text-center">
+                        <img src="{{educa.educacion4}}" alt="" id="imgEducacion">
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <h3>{{educa.educacion1}}</h3>
+                        <h4>{{educa.educacion2}}</h4>
+                        <h5>{{educa.educacion3}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SKILL -->
+<div class="row main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2>Hard & Soft</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="card row col-sm-12 col-md-6 col-lg-4" *ngFor="let ski of skill">
+                    <div class="text-center">
+                        <circle-progress [percent]="ski.uno" [radius]="100" [showImage]="true"
+                            [imageSrc]="ski.imagenUno" [imageHeight]="90" [imageWidth]="90" [showUnits]="true"
+                            [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="4"
+                            [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true"
+                            [animationDuration]="300">
+                        </circle-progress>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- PROYECTOS -->
+<div class="row main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2>Proyectos</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="card row col-sm-12 col-md-6 col-lg-4" *ngFor="let proyect of proyecto">
+                    <div class="text-center">
+                        <div>
+                            <h3>{{proyect.nombrePro}}</h3>
+                        </div>
+                        <div class="clearfix">
+                            <img src="{{proyect.imagenPro}}" class="col-md-6 float-md-end mb-3 ms-md-3" alt=""
+                                id="imgProyecto">
+                            <p>
+                                {{proyect.infoPro}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FOOTER -->
+<div class="row">
+    <footer>
+        <p>Año 2022</p>
+        <p>Bs. As., Argentina.</p>
+    </footer>
+</div>

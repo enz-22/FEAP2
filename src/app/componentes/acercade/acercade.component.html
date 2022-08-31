@@ -1,0 +1,114 @@
+<div class="row main-container">
+  <div>
+    <img src="../../../assets/imgfondo.png" alt="" class="imgfondo">
+  </div>
+  <div id="main-container">
+    <div class="row aling-items" *ngFor="let acer of acerca">
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <h4>
+              <i class="bi bi-pencil-square" (click)="onOpenModal('edit', acer)" title="Editar"></i>
+            </h4>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <div class="text-center">
+                <img src="{{acer.fotoacerca}}" alt="" id="imgperfil">
+            </div>
+            <div>
+                <h1>{{acer.nombreacerca}}</h1>
+                <h2>Full Stack Developer Jr</h2>
+                <span>Buenos Aires (Argentina)</span>
+                <br>
+                <span>Informacion de contacto:
+                    <br>
+                    {{acer.contactoacerca}}</span>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6 container text-center">
+            <div class="row justify-content-start">
+                <div class="col-md-3">
+                    <img src="https://wsii.diread.uns.edu.ar/img/logo-uns.jpeg" alt="" id="imgAcer">
+                </div>
+                <div class="col-md-6 text-center" id="centro">
+                    <h2>Universidad Nacional del Sur</h2>
+                </div>
+            </div>
+            <div class="row justify-content-start">
+                <div class="col-md-3">
+                    <img src="https://img.freepik.com/vector-premium/logotipo-radio_9850-254.jpg?w=2000"
+                        alt="" id="imgAcer">
+                </div>
+                <div class="col-md-6 text-center" id="centro">
+                    <h2>Del Sur 103.7</h2>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <h2>Acerca de</h2>
+            </div>
+            <div id="acer">
+                <p>{{acer.detalleacerca}}</p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editAcercaModal" tabindex="-1" role="dialog" aria-labelledby="acercaEditModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateAcercaModalLabel">Editar Acerca</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #editForm="ngForm">
+          <div class="form-group">
+            <label for="nombreacerca">Nombre y Apellido</label>
+            <input type="text" ngModel="{{editAcerca?.nombreacerca}}" name="nombreacerca" class="form-control"
+              id="nombreacerca" aria-describedby="emailHelp" placeholder="nombres" maxlength="50">
+          </div>
+
+          <input type="hidden" ngModel="{{editAcerca?.idacerca}}" name="idacerca" class="form-control" id="idacerca"
+            placeholder="">
+
+          <div class="form-group">
+            <label for="contactoacerca">Información de contacto</label>
+            <input type="text" ngModel="{{editAcerca?.contactoacerca}}" name="contactoacerca" class="form-control"
+              id="contactoacerca" placeholder="informacion de contacto" maxlength="500">
+          </div>
+
+          <div class="form-group">
+            <label for="detalleacerca">Acerca de</label>
+            <textarea ngModel="{{editAcerca?.detalleacerca}}" name="detalleacerca" class="form-control" id="detalleacerca" style="height: 144px;" 
+              placeholder="acerca de" required="" maxlength="500"></textarea>  
+          </div>
+
+          <div class="form-group">
+            <label for="fotoacerca">Imagen de Perfil</label>
+            <input type="text" ngModel="{{editAcerca?.fotoacerca}}" name="fotoacerca" class="form-control"
+              id="fotoacerca" placeholder="foto de perfil" maxlength="250">
+          </div>
+
+          <div class="modal-footer">
+            <button data-bs-dismiss="modal" class="btn btn-primary" (click)="onUpdateAcerca(editForm.value)">
+              Guardar
+            </button>
+
+            <button type="button" id="" data-bs-dismiss="modal" class="btn btn-secondary">
+              Cerrar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

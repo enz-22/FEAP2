@@ -1,0 +1,23 @@
+.row{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    
+}
+
+#logoap{
+    width: 150px;
+    height: 64px;
+}
+
+.logored{
+    float: right;
+}
+
+.conteiner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointer {
+    cursor: pointer;
+}
